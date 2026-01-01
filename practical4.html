@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Child Node Manipulation Demo</title>
+</head>
+<body>
+  <ul id="list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+
+  <button id="addBtn">Append Child</button>
+  <button id="removeBtn">Remove Child</button>
+  <button id="modifyBtn">Modify Child</button>
+
+  <script>
+    const list = document.getElementById("list");
+    const addBtn = document.getElementById("addBtn");
+    const removeBtn = document.getElementById("removeBtn");
+    const modifyBtn = document.getElementById("modifyBtn");
+
+    // Append a new child node
+    addBtn.addEventListener("click", () => {
+      const newItem = document.createElement("li");
+      newItem.textContent = "New Item";
+      list.appendChild(newItem);
+    });
+
+    // Remove the last child node
+    removeBtn.addEventListener("click", () => {
+      if (list.lastChild) {
+        list.removeChild(list.lastChild);
+      }
+    });
+
+    // Modify the first child node
+    modifyBtn.addEventListener("click", () => {
+      if (list.firstChild) {
+        list.firstChild.textContent = "Modified Item 1";
+      }
+    });
+  </script>
+</body>
+</html>

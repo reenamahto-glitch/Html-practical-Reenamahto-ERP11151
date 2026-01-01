@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Listener Demo</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">Hover or Press Keys</div>
+  <button id="removeMouse">Remove Mouse Event</button>
+  <button id="removeKey">Remove Keyboard Event</button>
+
+  <script>
+    const box = document.getElementById("box");
+    const removeMouseBtn = document.getElementById("removeMouse");
+    const removeKeyBtn = document.getElementById("removeKey");
+
+    
+    function mouseOverHandler() {
+      box.innerHTML = "Mouse Over!";
+      box.style.backgroundColor = "orange";
+    }
+
+    
+    function keyPressHandler(event) {
+      box.innerHTML = Key Pressed: ${event.key};
+      box.style.backgroundColor = "lightgreen";
+    }
+
+    
+    box.addEventListener("mouseover", mouseOverHandler);
+    document.addEventListener("keydown", keyPressHandler);
+
+    
+    removeMouseBtn.addEventListener("click", () => {
+      box.removeEventListener("mouseover", mouseOverHandler);
+      box.innerHTML = "Mouse event removed!";
+      box.style.backgroundColor = "lightblue";
+    });
+
+
+    removeKeyBtn.addEventListener("click", () => {
+      document.removeEventListener("keydown", keyPressHandler);
+      box.innerHTML = "Keyboard event removed!";
+      box.style.backgroundColor = "lightblue";
+    });
+  </script>
+</body>
+</html> 
+echo "# Html-practical-Reenamahto-ERP11151" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/reenamahto-glitch/Html-practical-Reenamahto-ERP11151.git
+git push -u origin main

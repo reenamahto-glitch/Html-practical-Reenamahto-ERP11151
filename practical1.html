@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM Manipulation Demo</title>
+</head>
+<body>
+  <h1 id="title">Original Title</h1>
+  <p class="description">This is the original description.</p>
+  <div id="container"></div>
+
+  <script>
+    // Using getElementById()
+    const titleElement = document.getElementById("title");
+    titleElement.innerHTML = "Updated Title using getElementById()";
+
+    // Using querySelector() for a class
+    const descriptionElement = document.querySelector(".description");
+    descriptionElement.innerHTML = "Updated description using querySelector()";
+
+    // Adding new content dynamically
+    const containerElement = document.getElementById("container");
+    containerElement.innerHTML = "<p>New paragraph added dynamically!</p>";
+  </script>
+</body>
+</html>

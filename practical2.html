@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show/Hide & Toggle Demo</title>
+  <style>
+    .hidden {
+      display: none;
+    }
+    .highlight {
+      color: white;
+      background-color: teal;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2 id="message">Hello, I am visible!</h2>
+  <button id="toggleBtn">Toggle Visibility</button>
+  <button id="classBtn">Toggle Highlight Class</button>
+
+  <script>
+    // Get references to elements
+    const message = document.getElementById("message");
+    const toggleBtn = document.getElementById("toggleBtn");
+    const classBtn = document.getElementById("classBtn");
+
+    // Show/Hide element by toggling "hidden" class
+    toggleBtn.addEventListener("click", () => {
+      message.classList.toggle("hidden");
+    });
+
+    // Toggle CSS class dynamically
+    classBtn.addEventListener("click", () => {
+      message.classList.toggle("highlight");
+    });
+  </script>
+</body>
+</html>
