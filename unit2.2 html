@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selector Demo</title>
+  <style>
+    /* Universal selector: applies to all elements */
+    * {
+      font-family: Arial, sans-serif;
+      margin: 5px;
+    }
+
+    /* ID selector: targets a unique element */
+    #main-title {
+      color: darkblue;
+      text-align: center;
+      border-bottom: 3px solid darkblue;
+    }
+
+    /* Class selector: targets elements with .highlight */
+    .highlight {
+      background-color: yellow;
+      padding: 10px;
+      border: 2px dashed orange;
+    }
+
+    /* Descendant selector: targets <p> inside .nested */
+    .nested p {
+      color: green;
+      font-style: italic;
+    }
+
+    /* Group selector: applies same style to multiple elements */
+    h2, .grouped {
+      color: purple;
+      background-color: #f0e6ff;
+      padding: 8px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">CSS Selector Demonstration</h1>
+
+  <p class="highlight">This paragraph uses a <strong>class selector</strong>.</p>
+
+  <p id="special">This paragraph uses an <strong>ID selector</strong> (styled separately if needed).</p>
+
+  <div class="nested">
+    <p>This is inside a <strong>descendant selector</strong> example.</p>
+  </div>
+
+  <h2>Grouped Selector Example</h2>
+  <p class="grouped">This paragraph shares styles with the heading above.</p>
+</body>
+</html>

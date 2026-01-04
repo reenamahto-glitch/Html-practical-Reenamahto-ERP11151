@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML Text Formatting</h1>
+
+<p>
+<b>HTML</b> is used to create <i>web pages</i>.  
+It supports <u>text formatting</u> such as 
+<strong>bold</strong>, <em>italic</em>, and 
+<mark>highlighted</mark> text.
+</p>
+
+<p>
+This is <small>small text</small> and this is 
+<big>big text</big>.  
+Water formula: H<sub>2</sub>O  
+Square of 5: 5<sup>2</sup>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Div and Span Layout Example</title>
+  <style>
+    /* Layout styling using div */
+    .container {
+      width: 80%;
+      margin: auto;
+      border: 2px solid #333;
+      padding: 20px;
+    }
+
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .content {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    .sidebar {
+      width: 25%;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+
+    .main {
+      width: 75%;
+      padding: 10px;
+    }
+
+    /* Styling inline text with span */
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>My Website Layout</h1>
+    </div>
+
+    <div class="content">
+      <div class="sidebar">
+        <p>Sidebar content goes here</p>
+      </div>
+
+      <div class="main">
+        <p>
+          Welcome to the main section. 
+          Notice how the word <span class="highlight">important</span> 
+          is styled differently using a span.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

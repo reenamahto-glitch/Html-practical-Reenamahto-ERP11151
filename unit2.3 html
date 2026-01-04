@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Page</title>
+  <style>
+    /* Mobile-first base styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem; /* flexible unit */
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column; /* stack links on mobile */
+      background: #333;
+    }
+
+    nav a {
+      color: white;
+      padding: 1em;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    nav a:hover {
+      background: #575757;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 2vw; /* flexible unit based on viewport width */
+    }
+
+    .content, .sidebar {
+      margin: 1rem 0;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .content {
+      background: #f9f9f9;
+    }
+
+    .sidebar {
+      background: #e9e9e9;
+    }
+
+    footer {
+      background: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    /* Tablet view (≥600px) */
+    @media (min-width: 600px) {
+      nav {
+        flex-direction: row; /* horizontal menu */
+        justify-content: space-around;
+      }
+
+      .container {
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      .content {
+        flex: 3; /* wider content area */
+      }
+
+      .sidebar {
+        flex: 1; /* narrower sidebar */
+      }
+    }
+
+    /* Desktop view (≥1024px) */
+    @media (min-width: 1024px) {
+      body {
+        font-size: 1.2rem; /* scale text up */
+      }
+
+      header, footer {
+        padding: 2rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Web Page</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="content">
+      <h2>Main Content</h2>
+      <p>This section grows larger on bigger screens. On mobile, it stacks above the sidebar.</p>
+    </div>
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>This sidebar moves beside the content on tablets and desktops.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Responsive Design Demo</p>
+  </footer>
+</body>
+</html>

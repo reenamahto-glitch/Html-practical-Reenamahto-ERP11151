@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript in HTML</title>
+</head>
+<body>
+
+    <h2>JavaScript Function & Scope Example</h2>
+    <button onclick="showDetails()">Click to Show Details</button>
+
+    <script>
+        
+        function showDetails() {
+            var name = "reena";  
+            let age = 18;           
+            const course = "C.S.E WITH AI"; 
+
+            document.write("Name: " + name + "<br>");
+            document.write("Age: " + age + "<br>");
+            document.write("Course: " + course + "<br>");
+
+            if (true) {
+                var city = "Raipur";   
+                let score = 95;       
+                const grade = "A";     
+document.write("Inside Block:<br>");
+                document.write("City: " + city + "<br>");
+                document.write("Score: " + score + "<br>");
+                document.write("Grade: " + grade + "<br>");
+            }
+
+            document.write("Outside Block:<br>");
+            document.write("City: " + city + "<br>"); 
+        }
+    </script>
+
+</body>
+</html>
